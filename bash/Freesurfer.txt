@@ -1,2 +1,0 @@
-recon-all -subject sub-01subject001 -i sub-01subject001_T1w.nii.gz -all
-
