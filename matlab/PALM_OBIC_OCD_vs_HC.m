@@ -6,6 +6,7 @@ cd('/data/OBIC/Freesurfer/PALM')
 
 %% Both hemispheres together for GWC
 % Runs Palm on both hemispheres at the same time. Consider using palm_hemisplit and palm_hemimerge instead to perform one analysis which might be faster.
+
 palm -i /data/OBIC/Freesurfer/ICA/rh.nu.w-g.avg_fsaverage.mgh ... % 4D surface file for all subjects
 -i /data/OBIC/Freesurfer/ICA/lh.nu.w-g.avg_fsaverage.mgh ... % 4D surface file for all subjects
 -s /opt/freesurfer/subjects/fsaverage/surf/rh.white /opt/freesurfer/subjects/fsaverage/surf/rh.white.avg.area.mgh ... % Specifies surface and surface area, needed for TFCE
@@ -24,6 +25,7 @@ palm -i /data/OBIC/Freesurfer/ICA/rh.nu.w-g.avg_fsaverage.mgh ... % 4D surface f
 
 %% Both hemispheres together for gray matter signal intensity
 % Runs Palm on both hemispheres at the same time. Consider using palm_hemisplit and palm_hemimerge instead to perform one analysis which might be faster.
+
 palm -i /data/OBIC/Freesurfer/ICA/rh.nu.gm.avg_fsaverage.mgh ... % 4D surface file for all subjects
 -i /data/OBIC/Freesurfer/ICA/lh.nu.gm.avg_fsaverage.mgh ... % 4D surface file for all subjects
 -s /opt/freesurfer/subjects/fsaverage/surf/rh.white /opt/freesurfer/subjects/fsaverage/surf/rh.white.avg.area.mgh ... % Specifies surface and surface area, needed for TFCE
@@ -42,6 +44,7 @@ palm -i /data/OBIC/Freesurfer/ICA/rh.nu.gm.avg_fsaverage.mgh ... % 4D surface fi
 
 %% Both hemispheres together for white matter signal intensity
 % Runs Palm on both hemispheres at the same time. Consider using palm_hemisplit and palm_hemimerge instead to perform one analysis which might be faster.
+
 palm -i /data/OBIC/Freesurfer/ICA/rh.nu.wm.avg_fsaverage.mgh ... % 4D surface file for all subjects
 -i /data/OBIC/Freesurfer/ICA/lh.nu.wm.avg_fsaverage.mgh ... % 4D surface file for all subjects
 -s /opt/freesurfer/subjects/fsaverage/surf/rh.white /opt/freesurfer/subjects/fsaverage/surf/rh.white.avg.area.mgh ... % Specifies surface and surface area, needed for TFCE
@@ -60,6 +63,7 @@ palm -i /data/OBIC/Freesurfer/ICA/rh.nu.wm.avg_fsaverage.mgh ... % 4D surface fi
 
 %% Both hemispheres together for Regional Vulnearablity Index
 % Runs Palm on both hemispheres at the same time. Consider using palm_hemisplit and palm_hemimerge instead to perform one analysis which might be faster.
+
 palm -i /data/OBIC/Freesurfer/ICA/rh.nu.w-g.avg_fsaverage.mgh ... % 4D surface file for all subjects
 -i /data/OBIC/Freesurfer/ICA/lh.nu.w-g.avg_fsaverage.mgh ... % 4D surface file for all subjects
 -s /opt/freesurfer/subjects/fsaverage/surf/rh.white /opt/freesurfer/subjects/fsaverage/surf/rh.white.avg.area.mgh ... % Specifies surface and surface area, needed for TFCE
@@ -84,6 +88,7 @@ palm -i /data/OBIC/Freesurfer/ICA/rh.nu.w-g.avg_fsaverage.mgh ... % 4D surface f
 % Reanalysis of RVI on 8 June 2023
     % rh
     !mri_surfcluster --in GWC_RVI_2hemispheres_2contrasts_reanalysis_tfce_tstat_mfwep_m1_c1.mgz --subject fsaverage --hemi rh --surf white --annot aparc --thmin 0.95 --thmax 1 --sign pos --no-adjust --sd /data/OBIC/Freesurfer --sum RVI_reanalysis_result_mfwep_m1_c1.txt 
+    
     % lh
     !mri_surfcluster --in GWC_RVI_2hemispheres_2contrasts_reanalysis_tfce_tstat_mfwep_m2_c1.mgz --subject fsaverage --hemi lh --surf white --annot aparc --thmin 0.95 --thmax 1 --sign pos --no-adjust --sd /data/OBIC/Freesurfer --sum RVI_reanalysis_result_mfwep_m2_c1.txt 
 
