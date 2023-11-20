@@ -1,6 +1,6 @@
 #!/bin/bash -x
 # Written by Anders Lillevik Thorsen, September 2021
-# This script checks if the stats file from Freesurfer is present, and outputs a list where the ffile is missing. This can ba used to identify failed Freesurfer segmentatnons. The script also checks if the failed segmentation is due to a field of view above 256.
+# This script checks if the stats file from Freesurfer is present, and outputs a list where the ffile is missing. This can ba used to identify failed Freesurfer segmentation. The script also checks if the failed segmentation is due to a field of view above 256.
 
 set -euo pipefail
 
@@ -15,7 +15,6 @@ outputdir=/data/OBIC/Freesurfer # Where you want the Freesurfer data to end up
 
 	rm missing_asegs_stats.txt -f # Deletes old list to avoid appending to previous version
 	echo "subject_ID number_of_slices" >> missing_asegs_stats.txt # appends headers to list
-
 
 # Loops over subjects and finds those missing aseg.stats file
 	for subject in `cat all.txt` # Loops through list of all subject
