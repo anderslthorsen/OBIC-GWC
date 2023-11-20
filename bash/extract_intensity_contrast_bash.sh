@@ -1,6 +1,7 @@
 #!/bin/bash
 # Written by Anders Lillevik Thorsen, December 2021
 # A port from tcsh to bash of UiO's script for calculating gray-white matter contrast
+# Takes a single subject's processed Freesurfer directory as input
 
 # Setup relevant variables
 export SUBJECTS_DIR=/data/OBIC/Freesurfer
